@@ -47,9 +47,39 @@
             set { _alder = value; }
         }
 
+        /*
+         * Konstruktør
+         */
+        public Laerer(string navn, string udd, string viden, int alder)
+        {
+            _navn = navn;
+            _uddannelse = udd;
+            _viden = viden;
+            _alder = alder;
+        }
+
+
+        // DEFAULT construtor
+        public Laerer()
+        {
+            _navn = "";
+            _uddannelse = "";
+            _viden = "";
+            _alder = 0;
+        }
+
+
+
+
+
         public override string ToString()
         {
             return $"{{{nameof(Navn)}={Navn}, {nameof(Uddannelse)}={Uddannelse}, {nameof(Viden)}={Viden}, {nameof(Alder)}={Alder.ToString()}}}";
         }
+
+        //public override string ToString()
+        //{
+        //    return $"Navn= {Navn}, Uddannelse={Uddannelse}, Viden= {Viden}, Alder={Alder}";
+        //}
     }
 }
